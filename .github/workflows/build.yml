@@ -55,7 +55,8 @@ jobs:
           gradle-version: "9.2.1"
 
       - name: Build mod
-        run: gradle build --no-daemon
+  working-directory: main
+  run: gradle build --no-daemon
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
